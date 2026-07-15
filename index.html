@@ -1,1 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe de Gestión 2026</title>
 
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>Informe</h2>
+
+    <a href="#inicio">Inicio</a>
+    <a href="#estadisticas">Estadísticas</a>
+    <a href="#pedagogico">Pedagógico</a>
+    <a href="#casos">Casos Especiales</a>
+    <a href="#hallazgos">Hallazgos</a>
+    <a href="#plan">Plan de Acción</a>
+
+</div>
+
+<div class="contenido">
+
+<header id="inicio">
+
+    <h1>Informe de Gestión de Dirección de Grupo</h1>
+
+    <h3>Centro Penitenciario Popayán</h3>
+
+    <p>
+        Director de Grupo<br>
+        Diego Armando Hoyos Dorado
+    </p>
+
+</header>
+
+
+<section class="cards">
+
+<div class="card azul">
+<h2>229</h2>
+<p>Estudiantes</p>
+</div>
+
+<div class="card verde">
+<h2>6</h2>
+<p>CLEI</p>
+</div>
+
+<div class="card naranja">
+<h2>23</h2>
+<p>Inasistencias</p>
+</div>
+
+<div class="card rojo">
+<h2>7.65</h2>
+<p>Promedio General</p>
+</div>
+
+</section>
+
+
+<section id="estadisticas">
+
+<h2>Promedio Académico</h2>
+
+<canvas id="graficaPromedio"></canvas>
+
+</section>
+
+
+<section id="pedagogico">
+
+<h2>Consolidado Pedagógico</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Área</th>
+<th>CLEI</th>
+<th>Temas</th>
+<th>Impacto</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Matemáticas</td>
+<td>1-2</td>
+<td>Valor Posicional</td>
+<td>Alta participación</td>
+
+</tr>
+
+<tr>
+
+<td>Biología</td>
+<td>1-2</td>
+<td>Célula</td>
+<td>Interés alto</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+
+<section id="casos">
+
+<h2>Casos Especiales</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Estudiante</th>
+<th>Nivel</th>
+<th>Observación</th>
+<th>Estado</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Sofía Plaza Ramos</td>
+<td>3B</td>
+<td>Experiencia de Vida Trans</td>
+<td><span class="ok">Excelente</span></td>
+
+</tr>
+
+<tr>
+
+<td>Dany Urrea</td>
+<td>5-6</td>
+<td>Situación de Salud</td>
+<td><span class="alerta">Pendiente</span></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+
+<section id="hallazgos">
+
+<h2>Hallazgos</h2>
+
+<div class="hallazgo">
+
+<h3>Consistencia Pedagógica</h3>
+
+<p>
+Se evidencia cumplimiento de la programación en Matemáticas y Biología.
+</p>
+
+</div>
+
+<div class="hallazgo">
+
+<h3>Validación de Asistencia</h3>
+
+<p>
+Se identifican inconsistencias entre asistencia y calificaciones.
+</p>
+
+</div>
+
+<div class="hallazgo">
+
+<h3>Inclusión</h3>
+
+<p>
+Los procesos inclusivos muestran resultados positivos.
+</p>
+
+</div>
+
+</section>
+
+
+<section id="plan">
+
+<h2>Plan de Acción</h2>
+
+<ul>
+
+<li>Revisión de calificaciones.</li>
+
+<li>Jornadas de refuerzo.</li>
+
+<li>Entrega de material.</li>
+
+<li>Monitoreo permanente.</li>
+
+<li>Trabajo con Bienestar.</li>
+
+</ul>
+
+</section>
+
+</div>
+
+
+<script>
+
+const ctx=document.getElementById('graficaPromedio');
+
+new Chart(ctx,{
+type:'bar',
+
+data:{
+
+labels:['CLEI1','CLEI2','CLEI3','CLEI4','CLEI5'],
+
+datasets:[{
+
+label:'Promedio',
+
+data:[10,8.67,7.95,5.39,7.25]
+
+}]
+
+}
+
+});
+
+</script>
+
+</body>
+
+</html>
